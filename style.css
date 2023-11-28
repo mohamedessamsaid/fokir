@@ -1,0 +1,551 @@
+:root {
+    --main-color : #ff305b;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+.container {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 40px;
+  }
+.clr {
+    clear: both;
+}
+.active {
+    color: var(--main-color);
+}
+
+.header  {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+.header .content .logo  {
+    float: left;
+    width: 20%;
+    font-size: 20px;
+    color: var(--main-color);
+    text-decoration: none;
+
+}
+
+.header .content .list {
+    float: right;
+    width: 50%; 
+
+}
+.header .content .list li {
+    list-style: none;
+    float: left;
+    padding: 10px;
+    
+}
+.header .content .list li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    transition: .3s;
+}
+.header .content .list.open  {
+    background-color: #555555;
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 10px ;
+    top: 50px;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.header .content .list.open li  {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+    margin: 5px;
+}
+.header .content .list.open li a {  
+    color: #fff;
+    font-weight: bold;
+}
+
+.header .content .list li a:hover,
+.header .content .list  .active  {
+    color: var(--main-color);
+}
+
+.header i {
+display: block;
+color: #fff;
+cursor: pointer;
+text-align: right;
+padding: 0;
+}
+
+/* start landing  */
+.landing {
+  height : 100vh;
+    background-image: url(./images/slider-02.jpg);
+    background-size: cover;
+    position: relative;
+    
+}
+.landing .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 80%);
+}
+.landing .landing-content {
+    text-align: center;
+    margin-top: 250px;
+}
+.landing .landing-content h3 {
+    font-size: 25px;
+    color: #fff;
+    margin: 20px 0;
+}
+.landing .landing-content h1 {
+    font-size: 60px;
+    letter-spacing: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.landing .landing-content p {
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+/* end landing  */
+
+/* start about  */
+ .about {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+} 
+.about .card {
+    width: 95%;
+    
+}
+
+.about .card .img {
+    width:100%;
+    float: left;
+    text-align: center;
+    margin-left: 100px;
+    position: relative;
+    overflow: hidden;
+
+}
+.about .card .img:hover  .img-overlay
+{
+    top: 0;
+}
+
+
+.about .card .img img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.about .card .img .img-overlay {
+    position: absolute;
+     width: 100%;
+    height: 100%; 
+    top: 100%;
+    transition: all 1s;
+    background-color: rgb(0 0 0 / 80%);
+    border-radius: 10px;
+    
+}
+.about .card .img .img-overlay i {
+    position: relative;
+    color: #fff;
+    z-index: 5;
+    padding: 20px;
+    top: 50%;
+}
+.about .card .img .img-overlay i:hover {
+    color: var(--main-color);
+}
+
+
+.about .card .card-text {
+    width: 50%;
+    float: right;
+}
+
+.about .card .card-text h2 {
+font-size: 30px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+.about .card .card-text h2 span {
+    color: var(--main-color);
+}
+.about .card .card-text p{
+    color: #555555;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    font-weight: 100px;
+    margin-bottom: 20px;
+    border-bottom: 1px  dashed #555555;
+    padding-bottom: 25px;
+}
+.about .info {
+width: 100%;
+}
+.about .info li{
+ width: 50%;
+ float: left;
+ padding: 15px;
+ list-style: none;
+ color: #555555;
+}
+.about .info li span {
+    font-weight: bold;
+    color: black;
+}
+.about .btn button {
+    padding: 12px 25px;
+    margin:  20px 10px;
+    border: none;
+    background-color: var(--main-color);
+    border-radius: 4px;
+    color: #fff;
+
+}
+.red {
+    background-color: #fff;
+} 
+    /* end about  */
+    /* start our-services */
+    .our-services {
+        margin-top: 70px;
+    
+        padding-left: 60px;
+        background-color: #eee;
+    }
+ .head {
+    text-align: center;
+    padding: 20px 0;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 30px;
+}
+ .head::before{
+    content: "";
+    position: absolute;
+    width: 152px;
+    height: 1px;
+    top: 60px;
+    background-color: var(--main-color);
+    right: 0px;
+    left: 0;
+    margin: auto;
+} 
+.head::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 9px;
+    top: 55px;
+    right: 0px;
+    left: 0;
+    margin: auto;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.our-services .serv-content {
+    width: 100%;
+    padding-bottom: 25px;
+}
+.our-services .serv {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    transition: .3s;
+}
+.our-services .serv:hover {
+box-shadow: 5px 5px 5px 5px #fff;
+background-color: #fff;
+border-radius: 5px;
+}
+.our-services .serv i {
+    color: var(--main-color);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.our-services .serv h2 {
+    font-size: 24px;
+    font-weight: 500px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+.our-services .serv p {
+    color: #555555;
+    line-height: 1.8;
+}
+
+/* end our-services */
+
+/* start our portofolio  */
+.portofolio {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    
+}
+.portofolio .btns {
+    text-align: center;
+    margin: 30px;
+}
+.portofolio .btns button {
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.portofolio .imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.portofolio .imgs img {
+    width: 100%;
+    padding: 20px 5px;
+}
+/* .portofolio .imgs::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    right: 0;
+    background-color: red;
+} */
+
+/* end our portofolio  */
+
+/* start section  */
+.feedback {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+}
+.feedback .card {
+    background-color: #eee;
+    margin: auto;
+    border-radius: 5px;
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.feedback .card .img {
+    padding: 30px;
+    z-index: 2;
+}
+
+.tringale {
+    position: absolute;
+    width: 319px;
+    height: 272px;
+    top: -155px;
+    left: -174px;
+    background-color: var(--main-color);
+    transform: rotate(45deg);
+}
+
+
+.feedback .card .img img {
+     width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+.feedback .card-text h2 {
+text-transform: capitalize;
+margin: 20px 10px;
+color: #333333;
+} 
+.feedback .card-text {
+    display: block;
+    width: 67%;
+    text-align: left;
+}
+.feedback .card-text i {
+font-size: 12px;
+color: #555555;
+margin: 10px
+}
+.feedback .card-text p {
+    color: #555555;
+    line-height: 1.8;
+    font-style: italic;
+}
+.feedback .card-text i {
+    color: #f1c30d
+}
+/* end section  */
+
+/* start blog  */
+.blog {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #eee;
+}
+.blog .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.blog .content .card {
+    background-color: #fff;
+    width: 350px;
+    margin: 11px;
+}
+.blog .content .card .img img {
+    width: 100%;
+}
+.blog .content .card img {
+    width: 100%;
+}
+.blog .content .card .blog-text {
+    padding: 10px 20px;
+    color: #555555;
+}
+
+.blog .content .card .blog-text h2 {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0 ;
+    color: #333333;
+}
+.blog .content .card .blog-text p {
+   
+    line-height: 1.5;
+}
+.blog .content .card .blog-text button {
+    border: none;
+    background-color: #fff;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #555555;
+    transition: .3s;
+}
+.blog .content .card .blog-text button:hover {
+    color: var(--main-color);
+}
+
+/* end blog  */
+
+/* start conatct us  */
+    .conatct {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .conatct form {
+        text-align: center;
+        display: flex; 
+        flex-wrap: wrap;
+        width: 75% ;
+        padding: 0 50px;
+        margin: auto;
+    }
+    .conatct form #in1,
+    .conatct form #in2 {
+        width: 45%;
+        padding: 15px 20px;
+        border-radius: 5px;
+        margin: 10px auto;
+       border: 1px solid #ccc;
+    }
+    .conatct form #in3 {
+        width: 95%;
+        padding: 15px 20px;
+        margin: 10px auto;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .conatct form textarea {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 10px auto;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .conatct form button {
+    padding: 13px 18px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    margin: 17px;
+    cursor: pointer;
+    }
+/* end conatct us  */
+
+/* start footer  */
+footer {
+    background-color: #555555;
+    margin-top: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 200px;
+
+}
+footer .footer {
+        color: #fff;
+       text-align: center;
+       padding-top: 70px;
+}
+.footer .icons i {
+    padding: 10px;
+}
+.footer p span {
+    color: var(--main-color);
+}
+/* start footer  */
+
+
+.kazem{
+    background-color: #333333;
+    border: 10px solid red;
+    
+}
+.kazem div span {
+    color: #f1c30d;
+    font-size: 16px;
+}
